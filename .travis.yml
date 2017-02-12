@@ -7,6 +7,6 @@ osx_image: xcode8.2
 before_script:
   - xcrun simctl delete 1FD54EA7-5A25-4D6F-8599-D6F7687DA4EE
 script:
-  - xcodebuild -project "Tools Test App.xcodeproj" -scheme "Tools Test App" -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.2g' build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+  - xcodebuild -project "Tools Test App.xcodeproj" -scheme "Tools Test App" -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.2' build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Tools Test App'
