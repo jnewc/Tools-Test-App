@@ -1,5 +1,10 @@
 language: objective-c
+
 xcode_project: "Tools Test App.xcodeproj" # path to your xcodeproj folder
 xcode_scheme: "Tools Test App"
 osx_image: xcode8.2
-script: xcodebuild -project "Tools Test App.xcodeproj" -scheme "Tools Test App" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+
+script:
+  - xcodebuild -project "Tools Test App.xcodeproj" -scheme "Tools Test App" build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
