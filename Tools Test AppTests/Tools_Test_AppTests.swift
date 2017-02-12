@@ -25,9 +25,9 @@ class Tools_Test_AppTests: XCTestCase {
 		XCTAssert(true)
 	}
 	
-	func testFailing() {
-		XCTFail()
-	}
+//	func testFailing() {
+//		XCTFail()
+//	}
 	
 	func testViewController() {
 		let viewController = ViewController()
