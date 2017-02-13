@@ -10,3 +10,7 @@ script:
   - ./bin/test.sh
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Tools Test App'
+
+addons:
+    code_climate:
+        repo_token: 9341b8c6ef34ef5cfcb09547994c5d1377e442c6e3bfaa2cae2a6c1cc8c086ad
